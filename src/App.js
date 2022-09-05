@@ -4,14 +4,17 @@ import { UserContext } from "./components/UserContext"
 import Loader from "./components/Loader"
 import Login from "./components/Login"
 import Register from "./components/Register"
-import Welcome from "./components/Welcome"
+import Footer from "./components/partials/Footer"
+import Header from "./components/partials/Header"
+import Routing from  "./components/Routing"
+
 
 function App() {
   const [currentTab, setCurrentTab] = useState("login")
   const [userContext, setUserContext] = useContext(UserContext)
 
   const verifyUser = useCallback(() => {
-    fetch("https://medicheck-in-backend.herokuapp.com/" + "users/refreshToken", {
+    fetch(process.env.REACT_APP_API_ENDPOINT + "users/refreshToken", {
       method: "POST",
       credentials: "include",
       headers: { "Content-Type": "application/json" },
@@ -52,19 +55,25 @@ function App() {
     }
   }, [syncLogout])
 
-  return userContext.token === null ? (
-    <Card elevation="1">
-      <Tabs id="Tabs" onChange={setCurrentTab} selectedTabId={currentTab}>
-        <Tab id="login" title="Login" panel={<Login />} />
-        <Tab id="register" title="Register" panel={<Register />} />
-        <Tabs.Expander />
-      </Tabs>
-    </Card>
-  ) : userContext.token ? (
-    <Welcome />
-  ) : (
-    <Loader />
-  )
+  return <div>
+    <Header />
+    {userContext.token === null ? (
+      <div className="box">
+        <Card elevation="1">
+          <Tabs id="Tabs" onChange={setCurrentTab} selectedTabId={currentTab}>
+            <Tab id="login" title="Login" panel={<Login />} />
+            <Tab id="register" title="Register" panel={<Register />} />
+            <Tabs.Expander />
+          </Tabs>
+        </Card>
+      </div>
+    ) : userContext.token ? (
+      <Routing />
+    ) : (
+      <Loader />
+    )}
+    <Footer />
+  </div>
 }
 
 export default App

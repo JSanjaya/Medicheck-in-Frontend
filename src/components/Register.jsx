@@ -18,7 +18,7 @@ const Register = () => {
 
     const genericErrorMessage = "Something went wrong! Please try again later."
 
-    fetch("https://medicheck-in-backend.herokuapp.com/" + "users/signup", {
+    fetch(process.env.REACT_APP_API_ENDPOINT + "users/signup", {
       method: "POST",
       credentials: "include",
       headers: { "Content-Type": "application/json" },
@@ -32,7 +32,6 @@ const Register = () => {
           } else if (response.status === 401) {
             setError("Invalid email and password combination.")
           } else if (response.status === 500) {
-            console.log(response)
             const data = await response.json()
             if (data.message) setError(data.message || genericErrorMessage)
           } else {

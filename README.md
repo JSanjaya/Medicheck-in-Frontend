@@ -7,6 +7,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Author: Abhishek EH
 * Date: 2021
 * Availability: https://www.codingdeft.com/posts/react-authentication-mern-node-passport-express-mongo/
-* Note: Code was taken from source with minor modifications 
+* Note: Login UI and authentication/authorization functionality was taken from source
 
 

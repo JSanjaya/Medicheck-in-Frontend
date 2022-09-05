@@ -1,0 +1,14 @@
+/* .box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+
+  } */
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
