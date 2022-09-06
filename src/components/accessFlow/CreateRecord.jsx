@@ -37,7 +37,8 @@ class CreateRecord extends React.Component {
     render() {
         return (
                 <form className="creation-form" onSubmit={this.handleSubmit}>
-                    <textarea rows={10} cols={50} alue={this.state.value} onChange={this.handleChange} />
+                    <textarea placeholder="Write something down here or click Submit to create an empty entry."
+                    rows={10} cols={50} value={this.state.value} onChange={this.handleChange} />
                     <input type="submit" value="Submit" />
                 </form>
         );
