@@ -1,5 +1,15 @@
+@import "~normalize.css";
 @import "~@blueprintjs/core/dist/blueprint.css";
 
+
+.loader {
+  margin: 100px auto;
+}
+
+
+body {
+  background-color: beige;
+}
 
 header {
   background-color: lightsalmon;
@@ -128,4 +138,5 @@ footer {
 .user-actions {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }

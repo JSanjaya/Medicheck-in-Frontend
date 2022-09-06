@@ -73,15 +73,6 @@ const Welcome = () => {
         })
     }
 
-    const refetchHandler = () => {
-        // set details to undefined so that spinner will be displayed and
-        // fetchUserDetails will be invoked from useEffect
-        setUserContext(oldValues => {
-            return { ...oldValues, details: undefined }
-        })
-    }
-
-
     return <div >
         {userContext.details === null ? (
             "Error Loading User details"
@@ -108,7 +99,6 @@ const Welcome = () => {
                                     onClick={navigateToChoose}
                                     intent="success"
                                 />
-                                <Button text="Refetch" intent="primary" onClick={refetchHandler} />
                                 <Button
                                     text="Logout"
                                     onClick={logoutHandler}
