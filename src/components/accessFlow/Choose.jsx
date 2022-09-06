@@ -1,6 +1,6 @@
 import { Button } from "@blueprintjs/core"
 import React from "react"
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Choose = props => {
     const navigate = useNavigate();
@@ -14,18 +14,24 @@ const Choose = props => {
     }
 
     return (
-        <div className="container">
-            <h1>Did you take your medication today?</h1>
-            <Button
-                text="Yes"
-                intent="primary"
-                onClick={handleTaken}
+        <div className="choose-container">
+            <div className="choose-message">
+                <h1>Did you take your medication today?</h1>
+            </div>
+            <div className="choose-buttons">
+                <Button
+                    text="Yes"
+                    intent="primary"
+                    onClick={handleTaken}
+                    className="choose-button"
                 />
-            <Button
-                text="No"
-                intent="primary"
-                onClick={handleAbstain}
+                <Button
+                    text="No"
+                    intent="primary"
+                    onClick={handleAbstain}
+                    className="choose-button"
                 />
+            </div>
         </div>
     )
 }

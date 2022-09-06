@@ -28,10 +28,10 @@ handleClick() {
 
 render() {
   return (
-    <div className="">
-      <p>{this.props.answer ? '🥳' : '🙂'}</p>
-      <p>{this.props.notes}</p>
+    <div className="bp4-card single-record">
       <p>{this.props.day}</p>
+      <h2>{this.props.answer ? '🥳' : '🙂'}</h2>
+      <p>{this.props.notes}</p>
       <button
         onClick={this.handleClick}
       >

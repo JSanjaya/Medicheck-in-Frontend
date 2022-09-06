@@ -3,10 +3,7 @@
 @import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
 
 body {
-  margin: 0 auto;
-  max-width: 400px;
   background-color: beige;
-  display: flex;
 }
 
 .center {
@@ -21,22 +18,14 @@ body {
 }
 
 /* ... */
-.user-details {
-  display: flex;
-  justify-content: space-between;
-}
-.user-actions {
-  display: flex;
-  flex-direction: column;
-}
 
-.footer {
+/* .footer {
 position:absolute;
 left: 42%;
 bottom:0;
-}
+} */
 
-.header {
+/* .header {
   background-color: lightsalmon;
   position: absolute;
   left: 0%;
@@ -45,74 +34,5 @@ bottom:0;
   color: azure;
   font-family: 'Lilita One';
   
-}
+} */
 
-.box {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 25%;
-  display: flex;
-
-}
-
-.screen {
-  position: absolute;
-  height: 85%;
-  width: 100%;
-  left: 0;
-  top: 10%;
-  background: beige;
-  display: flex;
-  text-align: center;
-}
-
-.emoticon {
-  position: absolute;
-  text-align: center;
-  top: 15%;
-  left: 43%;
-  font-size: 10rem;
-}
-
-.message {
-  position: absolute;
-  text-align: center;
-  top: 40%;
-  left: 37%;
-}
-
-.message2 {
-  position: absolute;
-  text-align: center;
-  top: 40%;
-  left: 34%;
-}
-
-.container {
-  top: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-}
-
-.container-other {
-  top: 70%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  gap: 10px;
-}
-
-.have-flex {
-  display: flex;
-  justify-content: space-around;
-  gap: 5rem;
-}
-
-.testing {
-  top: 20%;
-}

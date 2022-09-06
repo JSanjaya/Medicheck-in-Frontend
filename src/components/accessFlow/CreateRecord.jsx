@@ -22,7 +22,7 @@ class CreateRecord extends React.Component {
             method: "POST",
             credentials: "include",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ answer: this.props.answer, notes: this.state.value, day: new Date().toLocaleString().slice(0, 10) }),
+            body: JSON.stringify({ answer: this.props.answer, notes: this.state.value, day: new Date().toLocaleString().slice(0, 8)}),
         }).then(async response => {
             if (!response.ok) {
                 console.log("Something went wrong");
@@ -36,13 +36,10 @@ class CreateRecord extends React.Component {
 
     render() {
         return (
-            <form className="box" onSubmit={this.handleSubmit}>
-                <label>
-                    Note:
-                    <textarea value={this.state.value} onChange={this.handleChange} />
-                </label>
-                <input type="submit" value="Submit" />
-            </form>
+                <form className="creation-form" onSubmit={this.handleSubmit}>
+                    <textarea rows={10} cols={50} alue={this.state.value} onChange={this.handleChange} />
+                    <input type="submit" value="Submit" />
+                </form>
         );
     }
 

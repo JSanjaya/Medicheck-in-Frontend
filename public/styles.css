@@ -1,14 +1,131 @@
-/* .box {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 25%;
+@import "~@blueprintjs/core/dist/blueprint.css";
 
-  } */
 
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
+header {
+  background-color: lightsalmon;
+  padding: 6px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  color: azure;
+  font-family: 'Arial';
+  font-weight: 600;
+}
+
+footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+.app-container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.choose-message {
+  display: flex;
+  top: 20%;
+}
+
+.choose-container {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.choose-button {
+  width: 200px;
+}
+
+.choose-buttons {
+  display: flex;
+  gap: 50%;
+}
+
+.choices-page {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.emoticon-container .emoticon-size {
+  margin: 0;
+}
+
+.emoticon-size {
+  font-size: 7rem;
+}
+
+.creation-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 25%;
+  gap: 20px;
+}
+
+.welcome-container {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  gap: 10%;
+  flex-direction: column;
+  margin-bottom: -142px; 
+}
+
+.welcome-container:after {
+  content: "";
+  display: block;
+}
+
+.welcome-card-container {
+  padding-top: 3%;
+  width: 20%;
+}
+
+
+.records-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 5px;
+
+}
+
+.single-record {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-size {
+  width: 25%;
+}
+
+.user-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.user-actions {
+  display: flex;
+  flex-direction: column;
+}

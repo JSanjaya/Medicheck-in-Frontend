@@ -2,13 +2,20 @@ import { Button, Card } from "@blueprintjs/core"
 import React, { useCallback, useContext, useEffect, useRef } from "react"
 import { UserContext } from "../UserContext"
 import Loader from "../Loader"
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import RenderRecords from "./RenderRecords"
 import _ from "lodash"
+
 
 const Welcome = () => {
     const [userContext, setUserContext] = useContext(UserContext);
     const previousList = useRef(userContext);
+    const navigate = useNavigate();
+
+    const navigateToChoose = () => {
+        // 👇️ navigate to /contacts
+        navigate('/choose');
+    };
 
     const fetchUserDetails = useCallback(() => {
         fetch(process.env.REACT_APP_API_ENDPOINT + "users/me", {
@@ -81,42 +88,41 @@ const Welcome = () => {
         ) : !userContext.details ? (
             <Loader />
         ) : (
-            <div>
-                <div className="box">
-                    <Card elevation="1">
+            <div className="welcome-container">
+                <div className="welcome-card-container">
+                    <Card elevation="1" className="card-bgcolor">
                         <div className="user-details">
                             <div>
-                                <p>
+                                <h2>
                                     Welcome&nbsp;
                                     <strong>
                                         {userContext.details.firstName}
                                         {userContext.details.lastName &&
                                             " " + userContext.details.lastName}
                                     </strong>!
-                                </p>
+                                </h2>
                             </div>
                             <div className="user-actions">
                                 <Button
+                                    text="New Entry"
+                                    onClick={navigateToChoose}
+                                    intent="success"
+                                />
+                                <Button text="Refetch" intent="primary" onClick={refetchHandler} />
+                                <Button
                                     text="Logout"
                                     onClick={logoutHandler}
-                                    minimal
-                                    intent="primary"
+                                    intent="warning"
                                 />
-                                <Link to='/choose'>
-                                    <li>New Entry</li>
-                                </Link>
-                                <Button text="Refetch" intent="primary" onClick={refetchHandler} />
                             </div>
                         </div>
                     </Card>
                 </div>
-                <div className="container-other">
-                    <RenderRecords records={userContext.details.records}
+                <RenderRecords records={userContext.details.records}
                     update={fetchUserDetails} />
-                </div>
             </div>
-        )} 
-        </div>
+        )}
+    </div>
 
 }
 

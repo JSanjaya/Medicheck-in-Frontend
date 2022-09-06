@@ -4,9 +4,8 @@ import { UserContext } from "./components/UserContext"
 import Loader from "./components/Loader"
 import Login from "./components/Login"
 import Register from "./components/Register"
-import Footer from "./components/partials/Footer"
-import Header from "./components/partials/Header"
 import Routing from  "./components/Routing"
+import Footer from "./components/partials/Footer"
 
 
 function App() {
@@ -55,25 +54,22 @@ function App() {
     }
   }, [syncLogout])
 
-  return <div>
-    <Header />
-    {userContext.token === null ? (
-      <div className="box">
-        <Card elevation="1">
+  return userContext.token === null ? (
+      <div className="app-container">
+        <Card elevation="1" className="card-size">
           <Tabs id="Tabs" onChange={setCurrentTab} selectedTabId={currentTab}>
             <Tab id="login" title="Login" panel={<Login />} />
             <Tab id="register" title="Register" panel={<Register />} />
             <Tabs.Expander />
           </Tabs>
         </Card>
+        <Footer />
       </div>
     ) : userContext.token ? (
       <Routing />
     ) : (
       <Loader />
-    )}
-    <Footer />
-  </div>
+    )
 }
 
 export default App

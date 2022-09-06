@@ -5,7 +5,8 @@ import Record from "../Record"
 const RenderRecords = props => {
 
     return (
-        props.records.map(record =>
+        <div className="records-display">
+        {props.records.map(record =>
             <Record
                 key={record._id}
                 id={record._id}
@@ -13,8 +14,9 @@ const RenderRecords = props => {
                 notes={record.notes}
                 day={record.day}
                 update={props.update}
-            />
-        ));
+            />)}
+        </div>
+        );
 }
 
 export default RenderRecords;
