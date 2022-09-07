@@ -29,9 +29,10 @@ Project includes a authentication and authorization system which hashes the user
 Future ToDos:
 - Allow users to customize what their Taken/Abstain pages look like
 - Allow users to view their entries in a seperate page
+- Improve the way entries are displayed (adding color, more condensed, etc..)
 - Allow users to exit their current pages (adding a back button for pages)
 - Allow users to edit their entries
-- Improve responsiveness accross all browsers and screen sizes (especially mobile)
+- Improve responsiveness across all browsers and screen sizes (especially mobile)
 - Better Password Validation
 
 Future ideas:
