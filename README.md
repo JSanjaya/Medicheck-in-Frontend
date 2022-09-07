@@ -1,8 +1,8 @@
-## Live Demo at:
+# Live Demo at:
 https://medicheck-in.netlify.app/
 
 
-# Works Cited
+## Works Cited
 * Title: Authentication in React using Express, Node, Passport and MongoDB
 * Author: Abhishek EH
 * Date: 2021
