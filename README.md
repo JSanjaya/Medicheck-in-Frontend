@@ -7,7 +7,7 @@ https://medicheck-in.netlify.app/
 * Author: Abhishek EH
 * Date: 2021
 * Availability: https://www.codingdeft.com/posts/react-authentication-mern-node-passport-express-mongo/
-* Note: This project's authentication/authorization system alongside was taken from this article with minor modifications.
+* Note: This project's authentication/authorization system was taken from this tutorial with minor modifications.
 
 ## Tech Stack:
 MongoDB
