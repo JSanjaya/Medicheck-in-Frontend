@@ -32,6 +32,13 @@ footer {
   height: 2.5rem;
 }
 
+.welcome-footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  bottom: 5px;
+}
+
 .app-container {
   height: 80vh;
   display: flex;
