@@ -1,3 +1,5 @@
+//Code taken from https://github.com/collegewap/mern-auth-client with minor modifications
+
 import { Spinner } from "@blueprintjs/core"
 import React from "react"
 

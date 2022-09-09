@@ -1,3 +1,5 @@
+//Code taken from https://github.com/collegewap/mern-auth-client with minor modifications
+
 import { Card, Tab, Tabs } from "@blueprintjs/core"
 import { useCallback, useContext, useEffect, useState } from "react"
 import { UserContext } from "./components/UserContext"

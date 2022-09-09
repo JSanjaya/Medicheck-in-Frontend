@@ -1,3 +1,5 @@
+//Code taken from https://github.com/collegewap/mern-auth-client with minor modifications
+
 import React from "react"
 import ReactDOM from "react-dom/client"
 import App from "./App"

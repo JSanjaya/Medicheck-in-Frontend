@@ -1,3 +1,4 @@
+// Code was taken from https://github.com/collegewap/mern-auth-client
 import { Button, Callout, FormGroup, InputGroup } from "@blueprintjs/core"
 import React, { useContext, useState } from "react"
 import { UserContext } from "./UserContext"

@@ -1,3 +1,5 @@
+// Code taken from https://github.com/collegewap/mern-auth-client
+
 import React, { useState } from "react"
 
 const UserContext = React.createContext([{}, () => {}])
