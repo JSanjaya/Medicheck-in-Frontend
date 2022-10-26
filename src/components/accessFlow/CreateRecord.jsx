@@ -22,7 +22,7 @@ class CreateRecord extends React.Component {
             method: "POST",
             credentials: "include",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ answer: this.props.answer, notes: this.state.value, day: new Date().toLocaleString().slice(0, 9)}),
+            body: JSON.stringify({ answer: this.props.answer, notes: this.state.value, day: new Date().toLocaleString().slice(0, 10)}),
         }).then(async response => {
             if (!response.ok) {
                 console.log("Something went wrong");
